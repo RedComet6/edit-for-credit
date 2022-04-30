@@ -33,7 +33,7 @@ If you wish to contribute to my content, please contact me at achamberlain.dev@g
 
 ## Links to Application
 
--   Here is the heroku: [xxx](xxx)
+-   Here is the heroku: [https://just-another-text-editor-arc.herokuapp.com/](https://just-another-text-editor-arc.herokuapp.com/)
 -   Here is the repo: [https://github.com/RedComet6/just-another-text-editor](https://github.com/RedComet6/just-another-text-editor)
 
 ## Questions
