@@ -2,10 +2,11 @@ import { Workbox } from "workbox-window";
 import Editor from "./editor";
 import "./database";
 import "../css/style.css";
-
+// clears main element
 const main = document.querySelector("#main");
 main.innerHTML = "";
 
+// while loading, display spinner
 const loadSpinner = () => {
     const spinner = document.createElement("div");
     spinner.classList.add("spinner");
@@ -17,8 +18,10 @@ const loadSpinner = () => {
     main.appendChild(spinner);
 };
 
+// create editor element
 const editor = new Editor();
 
+// if editor is undefined, display loading
 if (typeof editor === "undefined") {
     loadSpinner();
 }

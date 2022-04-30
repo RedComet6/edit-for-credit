@@ -1,5 +1,5 @@
 import { openDB } from "idb";
-
+// initialize indexedDB
 const initdb = async () =>
     openDB("jate", 1, {
         upgrade(db) {
@@ -11,7 +11,7 @@ const initdb = async () =>
             console.log("jate database created");
         },
     });
-
+// create elements to indexedDB
 export const putDb = async (content) => {
     console.log("PUT to the database");
     // Create a connection to the database database and version we want to use.
@@ -24,9 +24,9 @@ export const putDb = async (content) => {
     const request = store.put({ content: content });
     // Get confirmation of the request.
     const result = await request;
-    console.log("🚀 - data saved to the database", result);
+    console.log("Data saved to the database", result);
 };
-
+// read elements from indexedDB
 export const getDb = async () => {
     console.log("GET from the database");
     // Create a connection to the database database and version we want to use.
@@ -42,5 +42,5 @@ export const getDb = async () => {
     console.log("result.value", result);
     return result;
 };
-
+// run initialization
 initdb();
